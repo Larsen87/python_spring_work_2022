@@ -28,13 +28,13 @@ weight = (float(input("Введите массу тела: ")))
 
 match ed_mass:
     case "1":
-        print("Ответ: ",weight,"кг")
+        print("Ответ: ",weight,"кг")# килограмм
     case "2":
-        print("Ответ: ",weight / 1000000,"кг")
+        print("Ответ: ",weight / 1000000,"кг")# милиграмм
     case "3":
-        print("Ответ: ",weight / 1000,"кг")
+        print("Ответ: ",weight / 1000,"кг")# грамм
     case "4":
-        print("Ответ: ",weight * 1000,"кг")
+        print("Ответ: ",weight * 1000,"кг")# тонна
     case "5":
-        print("Ответ: ",weight * 100,"кг")
+        print("Ответ: ",weight * 100,"кг")# центнер
 
