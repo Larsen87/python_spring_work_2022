@@ -39,22 +39,22 @@ x_word = []
 x_word_index = []
 count = 0
 
-for i in hidden_word:
+for i in hidden_word: # Делаю из слова список из его букв.
     s_word.append(i)
 
 
-for i in range(len(s_word)):
+for i in range(len(s_word)): # Пустой список по длине списка s_word заполняю символами ▒
     x_word.append("▒")
 
 
 while True:
 
-    if count > 9:
+    if count > 9: # Условия выхода из цикла при наборе 10 ошибок
         print("Вы набрали 10 штрафных баллов. Игра закончена.")
 
         break
 
-    if x_word == s_word:
+    if x_word == s_word: # Выход из цикла при отгадывание всех букв
         print("Победа!")
         break
 
@@ -64,14 +64,14 @@ while True:
     print("Количество штрафных балло",count,".")
 
 
-    if s_word.count(letter) == 0:
+    if s_word.count(letter) == 0: # Если буква не встречается в списе, то счетчик +1
         print("Буквы '", letter, "' нет в слове.")
         count += 1
 
-    for i in range(len(s_word)):
+    for i in range(len(s_word)): # Записываю индексы угаданной буквы
         if s_word[i] == letter:
             x_word_index.append(i)
 
-        for i in x_word_index:
+        for i in x_word_index: # Меняю скрытые буквы на отгаданные по индексу и затираю список индексов
             x_word[i] = letter
             x_word_index.clear()
