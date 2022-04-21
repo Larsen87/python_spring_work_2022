@@ -38,10 +38,10 @@ s_word = []
 x_word = []
 x_word_index = []
 count = 0
-
+print(hidden_word)
 for i in hidden_word: # Делаю из слова список из его букв.
     s_word.append(i)
-
+print(s_word)
 
 for i in range(len(s_word)): # Пустой список по длине списка s_word заполняю символами ▒
     x_word.append("▒")
